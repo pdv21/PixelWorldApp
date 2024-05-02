@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="PixelWorldApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_bg" translatesAutoresizingMaskIntoConstraints="NO" id="5Df-bL-c6Q">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sT3-Ah-Dd8">
+                                <rect key="frame" x="76.666666666666686" y="59" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Hph-Cd-BEI"/>
+                                    <constraint firstAttribute="width" constant="240" id="p9F-4a-ALx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIXEL WORLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-Ur-wJ4">
+                                <rect key="frame" x="72.666666666666686" y="197" width="248" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3dS-y4-20H"/>
+                                    <constraint firstAttribute="width" constant="248" id="ll4-A2-kVp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-CL-Ca5" customClass="CustomButton" customModule="PixelWorldApp" customModuleProvider="target">
+                                <rect key="frame" x="81" y="689" width="231" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="ZC0-fH-pHM"/>
+                                    <constraint firstAttribute="height" constant="49" id="bit-ZX-Gbf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CHOOSE FACTION">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChooseButton:" destination="ShZ-Ma-FPa" eventType="touchUpInside" id="bXz-ag-OSM"/>
+                                    <action selector="ChooseFaction:" destination="ShZ-Ma-FPa" eventType="touchUpInside" id="1oK-6W-pg6"/>
+                                    <action selector="ChooseFactionButton:" destination="ShZ-Ma-FPa" eventType="touchUpInside" id="2Tn-UW-uOW"/>
+                                    <action selector="chooseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpm-uY-1yM"/>
+                                    <action selector="choosebutton:" destination="ShZ-Ma-FPa" eventType="touchUpInside" id="yHh-MY-eGY"/>
+                                    <segue destination="sMs-XU-Ajs" kind="show" identifier="ChooseFaction" id="MIE-nR-pKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Df-bL-c6Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="59o-kp-odk"/>
+                            <constraint firstAttribute="bottom" secondItem="5Df-bL-c6Q" secondAttribute="bottom" id="CJR-hn-T9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SEG-CL-Ca5" secondAttribute="bottom" constant="80" id="EOz-qz-OvA"/>
+                            <constraint firstItem="sT3-Ah-Dd8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PHq-Tr-cBX"/>
+                            <constraint firstItem="sT3-Ah-Dd8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zjj-Bo-icD"/>
+                            <constraint firstItem="5Df-bL-c6Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aLP-RC-i9N"/>
+                            <constraint firstItem="5Df-bL-c6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="brq-Cv-osq"/>
+                            <constraint firstItem="SEG-CL-Ca5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clp-O3-rqx"/>
+                            <constraint firstItem="Xkf-Ur-wJ4" firstAttribute="top" secondItem="sT3-Ah-Dd8" secondAttribute="bottom" constant="10" id="hbN-fg-ANL"/>
+                            <constraint firstItem="Xkf-Ur-wJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shr-d5-zpW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ShZ-Ma-FPa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="127.48091603053435" y="-27.464788732394368"/>
+        </scene>
+        <!--Choose Faction View Controller-->
+        <scene sceneID="ayM-yd-Yz6">
+            <objects>
+                <viewController id="sMs-XU-Ajs" customClass="ChooseFactionViewController" customModule="PixelWorldApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndg-5Z-U5H">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_character_faction_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Qig-OP-Dle">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="kTl-aG-1MC">
+                                <rect key="frame" x="72.666666666666686" y="139" width="248" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magician" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPu-ec-F6q">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="248" id="7wa-fy-Wkc"/>
+                                            <constraint firstAttribute="height" constant="50" id="iQs-19-ecX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Armor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="493-1f-Vx7">
+                                        <rect key="frame" x="0.0" y="71" width="248" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9XE-YU-Jgl"/>
+                                            <constraint firstAttribute="width" constant="248" id="G4U-jx-Bld"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSB-3Q-na7">
+                                <rect key="frame" x="15" y="74" width="71" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="67o-ph-qUq"/>
+                                    <constraint firstAttribute="width" constant="71" id="R0o-Ji-lmS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="B2s-Y9-kv5" kind="unwind" unwindAction="FromChooseFactionWithSegue:" id="eQx-m6-50c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ea-kE-HP8" customClass="CustomButton" customModule="PixelWorldApp" customModuleProvider="target">
+                                <rect key="frame" x="82.666666666666686" y="632" width="228" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="51H-7u-BGB"/>
+                                    <constraint firstAttribute="height" constant="71" id="M3u-Ix-Sd8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="28"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButton:" destination="sMs-XU-Ajs" eventType="touchUpInside" id="xYM-tF-bYR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="txi-7f-8ww"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ea-kE-HP8" firstAttribute="centerX" secondItem="Ndg-5Z-U5H" secondAttribute="centerX" id="2gM-Tj-XpS"/>
+                            <constraint firstItem="txi-7f-8ww" firstAttribute="bottom" secondItem="4Ea-kE-HP8" secondAttribute="bottom" constant="80" id="6Qu-ed-OpD"/>
+                            <constraint firstItem="Qig-OP-Dle" firstAttribute="leading" secondItem="txi-7f-8ww" secondAttribute="leading" id="Kpd-OT-5XS"/>
+                            <constraint firstItem="JSB-3Q-na7" firstAttribute="top" secondItem="txi-7f-8ww" secondAttribute="top" constant="15" id="NZT-yq-Kzx"/>
+                            <constraint firstItem="kTl-aG-1MC" firstAttribute="centerX" secondItem="Ndg-5Z-U5H" secondAttribute="centerX" id="Pet-ij-N3f"/>
+                            <constraint firstAttribute="bottom" secondItem="Qig-OP-Dle" secondAttribute="bottom" id="Q6b-sa-1BM"/>
+                            <constraint firstItem="Qig-OP-Dle" firstAttribute="top" secondItem="Ndg-5Z-U5H" secondAttribute="top" id="U0O-Sf-MLh"/>
+                            <constraint firstItem="JSB-3Q-na7" firstAttribute="leading" secondItem="txi-7f-8ww" secondAttribute="leading" constant="15" id="Wb3-ze-3eR"/>
+                            <constraint firstItem="Qig-OP-Dle" firstAttribute="trailing" secondItem="txi-7f-8ww" secondAttribute="trailing" id="ff9-9e-ipW"/>
+                            <constraint firstItem="kTl-aG-1MC" firstAttribute="top" secondItem="txi-7f-8ww" secondAttribute="top" constant="80" id="hQW-F7-IX2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GhY-n6-T1R"/>
+                    <connections>
+                        <outlet property="ArmorLabel" destination="493-1f-Vx7" id="kAn-zq-oeR"/>
+                        <outlet property="MagicianLabel" destination="IPu-ec-F6q" id="Jzo-IL-Xnm"/>
+                        <outlet property="OnStartButton" destination="4Ea-kE-HP8" id="4Jv-Df-rlT"/>
+                        <segue destination="Ipy-Gt-slG" kind="show" identifier="InGameSegue" id="aIp-jQ-BLC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEl-3s-YXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="B2s-Y9-kv5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1009.9236641221373" y="-27.464788732394368"/>
+        </scene>
+        <!--In Game View Controller-->
+        <scene sceneID="UvA-XQ-X75">
+            <objects>
+                <viewController id="Ipy-Gt-slG" customClass="InGameViewController" customModule="PixelWorldApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7zM-1w-BdI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-3s-zZ4">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="66Z-og-nr8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ldh-3s-zZ4" secondAttribute="bottom" id="7bn-uA-W6N"/>
+                            <constraint firstItem="ldh-3s-zZ4" firstAttribute="leading" secondItem="66Z-og-nr8" secondAttribute="leading" id="8gj-w1-VrC"/>
+                            <constraint firstItem="ldh-3s-zZ4" firstAttribute="trailing" secondItem="66Z-og-nr8" secondAttribute="trailing" id="Scv-Xb-vw0"/>
+                            <constraint firstItem="ldh-3s-zZ4" firstAttribute="top" secondItem="7zM-1w-BdI" secondAttribute="top" id="hDt-zL-jPa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uzb-pF-q6G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exY-Sf-kCk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893.8931297709923" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="640" height="640"/>
+        <image name="select_character_faction_bg" width="133.66667175292969" height="238.33332824707031"/>
+        <image name="welcome_bg" width="164.33332824707031" height="241.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
